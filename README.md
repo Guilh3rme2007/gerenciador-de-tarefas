@@ -2,24 +2,28 @@
 
 ## 📋 Descrição do Projeto
 
-O **Organizador de Finanças** é um aplicativo console em C++ para gerenciamento financeiro e de tarefas em grupo (ex: família, roommates, equipe). Permite cadastrar pessoas com suas contribuições financeiras, visualizar totais, adicionar/visualizar tarefas por pessoa e salvar dados em arquivo.
+Sistema de gerenciamento desenvolvido em **C++** para controle de finanças compartilhadas e organização de atividades em grupo. O projeto foca em algoritmos de divisão proporcional e persistência de dados em arquivos de texto.
 
-**Funcionalidades Implementadas:**
-- Cadastro de pessoas com valores de dinheiro pessoal (soma total calculada)
-- Visualização do dinheiro total disponível
-- Gerenciamento de tarefas: adicionar ou listar por pessoa (busca por nome)
-- Salvamento automático de dados em `dados.txt`
-- Menu interativo simples
+## 🛠️ Especificações Técnicas
 
-**Próximos Passos (baseado em TODO.md original):**
-1. Calcular dinheiro após gastos possíveis
-2. Listar pessoas com posse de dinheiro
-3. Listar gastos possíveis
-4. Dividir dinheiro pelos gastos
-5. Imprimir resultados
-6. Listar e imprimir tarefas (geral/por pessoa)
-7. Mostrar tarefas por pessoa + dinheiro gasto
-8. Salvar dados avançados
+- **Linguagem:** C++ (Padrão Procedural).
+- **Estruturas:** `structs` aninhadas para gerenciamento de dados complexos.
+- **Busca:** Implementação customizada de busca de substring com normalização de caracteres (`tolower`).
+- **Persistência:** Manipulação de arquivos com as bibliotecas `cstdio` e `cstring`.
+
+## 📈 Lógica Matemática: Divisão de Gastos
+
+A divisão não é feita de forma igualitária (divisão simples), mas sim **proporcional**. 
+A fórmula aplicada no código é:
+`Gasto Individual = (Saldo Pessoal / Saldo Total do Grupo) * Gasto Total Previsto`
+
+## 🚀 Funcionalidades Atuais
+
+- **Divisão Proporcional de Gastos**: Algoritmo que distribui custos de forma justa, baseada no saldo individual de cada membro.
+- **Busca Inteligente (Case-Insensitive)**: Sistema de localização de usuários que ignora a diferença entre letras maiúsculas e minúsculas (ex: "Joao" encontra "JOÃO").
+- **Gestão de Tarefas Dinâmica**: Controle de afazeres individuais com suporte a descrições detalhadas e marcação de status (Concluída/Pendente).
+- **Persistência de Dados (I/O)**: Sistema automático de salvamento e carregamento via arquivo `dados.txt`.
+- **UX no Terminal**: Tratamento de buffer de teclado para suportar entradas com espaços (nomes compostos e frases).
 
 ## 🛠️ Como Usar
 
